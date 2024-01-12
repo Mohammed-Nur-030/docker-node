@@ -1,0 +1,21 @@
+# Entire configuration
+
+version: '3.8'
+services:
+  postgres:
+    image: postgres #pulls from hub.docker.com
+    ports:
+    - '5432:5432'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_DB: review
+      POSTGRES_PASSWORD: password
+
+  redis: 
+    image: redis #from hub.docker.com
+    ports:
+      - '6379:6379'
+      
+
+# docker compose up      
+
